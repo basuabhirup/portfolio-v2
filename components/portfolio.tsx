@@ -8,6 +8,7 @@ import { Github, Linkedin, Mail, Twitter, ArrowUp } from "lucide-react";
 import Link from "next/link";
 import { SectionWrapper } from "./section-wrapper";
 import profile from "@/data/profile.json";
+import { SocialButtons } from "./social-buttons";
 
 export function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
@@ -40,8 +41,8 @@ export function Portfolio() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <header className="sticky top-0 z-50 w-full px-4 md:px-6 lg:px-8 xl:px-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center">
-          <div className="mr-4 hidden md:flex">
+        <div className="w-full flex h-14 justify-stretch items-center">
+          <div className="mx-4 w-full hidden md:flex justify-between">
             <Link className="mr-6 flex items-center space-x-2" href="/">
               <span className="hidden font-bold sm:inline-block">
                 {profile.name}
@@ -119,23 +120,7 @@ export function Portfolio() {
                 Contact
               </Link>
             </nav>
-            <div className="flex flex-1 ml-3 items-center space-x-4">
-              {!!profile.github && (
-                <Link href={profile.github}>
-                  <Github className="h-5 w-5" />
-                </Link>
-              )}
-              {!!profile.linkedin && (
-                <Link href={profile.linkedin}>
-                  <Linkedin className="h-5 w-5" />
-                </Link>
-              )}
-              {!!profile.twitter && (
-                <Link href={profile.twitter}>
-                  <Twitter className="h-5 w-5" />
-                </Link>
-              )}
-            </div>
+            <SocialButtons />
           </div>
         </div>
       </header>
@@ -175,51 +160,6 @@ export function Portfolio() {
             </CardContent>
           </Card>
         </SectionWrapper>
-        <SectionWrapper id="skills" className="bg-gray-100 dark:bg-gray-800">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
-            Skills
-          </h2>
-          <Card>
-            <CardContent className="pt-6">
-              {Object.entries(profile.skills).map(([category, skillList]) => (
-                <div key={category} className="mb-6">
-                  <h3 className="text-lg font-semibold mb-2">{category}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {skillList.map((skill) => (
-                      <Badge key={skill} variant="secondary">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        </SectionWrapper>
-        <SectionWrapper id="experience">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
-            Experience
-          </h2>
-          <Card>
-            <CardContent className="pt-6">
-              {profile.experiences.map((exp, index) => (
-                <div key={index} className="mb-6">
-                  <h3 className="text-lg font-semibold">{exp.company}</h3>
-                  <p className="text-sm text-gray-500">
-                    {exp.role} | {exp.period}
-                  </p>
-                  <ul className="list-disc list-inside mt-2">
-                    {exp.projects.map((project, pIndex) => (
-                      <li key={pIndex} className="text-sm">
-                        {project}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        </SectionWrapper>
         <SectionWrapper id="projects" className="bg-gray-100 dark:bg-gray-800">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
             Projects
@@ -245,6 +185,51 @@ export function Portfolio() {
               </Card>
             ))}
           </div>
+        </SectionWrapper>
+        <SectionWrapper id="experience">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
+            Experience
+          </h2>
+          <Card>
+            <CardContent className="pt-6">
+              {profile.experiences.map((exp, index) => (
+                <div key={index} className="mb-6">
+                  <h3 className="text-lg font-semibold">{exp.company}</h3>
+                  <p className="text-sm text-gray-500">
+                    {exp.role} | {exp.period}
+                  </p>
+                  <ul className="list-disc list-inside mt-2">
+                    {exp.projects.map((project, pIndex) => (
+                      <li key={pIndex} className="text-sm">
+                        {project}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </SectionWrapper>
+        <SectionWrapper id="skills" className="bg-gray-100 dark:bg-gray-800">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
+            Skills
+          </h2>
+          <Card>
+            <CardContent className="pt-6">
+              {Object.entries(profile.skills).map(([category, skillList]) => (
+                <div key={category} className="mb-6">
+                  <h3 className="text-lg font-semibold mb-2">{category}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {skillList.map((skill) => (
+                      <Badge key={skill} variant="secondary">
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
         </SectionWrapper>
         <SectionWrapper id="certifications">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
@@ -305,14 +290,25 @@ export function Portfolio() {
               {!!profile.twitter && (
                 <div className="flex items-center space-x-2">
                   <Twitter className="h-5 w-5" />
-                  <Link href={profile.twitter} className="hover:underline">
+                  <Link
+                    href={profile.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
                     {profile.twitter.split("://")[1]}
                   </Link>
                 </div>
               )}
               {profile.whatsapp && (
                 <Button>
-                  <Link href={profile.whatsapp}>WhatsApp: Click to chat</Link>
+                  <Link
+                    href={profile.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    WhatsApp: Click to chat
+                  </Link>
                 </Button>
               )}
             </CardContent>
@@ -324,6 +320,7 @@ export function Portfolio() {
           <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
             © 2024 {profile.name}. All rights reserved.
           </p>
+          <SocialButtons />
         </div>
       </footer>
       {showScrollTop && (
