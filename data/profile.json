@@ -1,0 +1,152 @@
+{
+    "name": "Abhirup Basu",
+    "headline": "Full Stack Engineer | (React + Node + Next).js",
+    "subheading": "Self-taught software engineer with 3+ years of expertise in TypeScript, React.js, and Next.js, dedicated to crafting user-focused web applications.",
+    "about": {
+        "paragraphs": [
+            "My journey into web development is unique, starting from a background in Applied Geology. During my M.Sc. thesis on GIS-based Satellite Image Processing, I discovered my passionfor technology and programming.",
+            "This spark led me to transition into web development, where I've honed my skills in creating user-centric web experiences. My geological background gives me a unique perspective on problem-solving and data visualization in web applications.",
+            "Currently, I work as a Freelance Full Stack Developer, focusing on AI-powered newsletter applications and mobile-responsive websites. My goal is to create intuitive, efficient, and scalable web solutions that make a real difference for users and businesses alike."
+        ]
+    },
+    "skills": {
+        "Frontend": [
+            "TypeScript",
+            "React.js",
+            "Next.js",
+            "CSS",
+            "SASS/SCSS",
+            "HTML",
+            "JavaScript",
+            "Bootstrap",
+            "Tailwind",
+            "jQuery",
+            "Material-UI"
+        ],
+        "Backend": [
+            "Node.js",
+            "Express.js",
+            "Prisma",
+            "Python",
+            "Django",
+            "FastAPI",
+            "MySQL",
+            "PostgreSQL"
+        ],
+        "API": [
+            "REST",
+            "GraphQL",
+            "WebSocket"
+        ],
+        "Version Control": [
+            "Git",
+            "GitHub",
+            "GitLab"
+        ],
+        "Deployment": [
+            "AWS",
+            "Netlify",
+            "Vercel"
+        ]
+    },
+    "experiences": [
+        {
+            "company": "Freelance",
+            "role": "Full Stack Developer",
+            "period": "Mar 2024 - Present",
+            "projects": [
+                "Developed an AI-powered newsletter application using TypeScript, Next.js, and TailwindCSS.",
+                "Provided technical support for the Botgo chatbot application."
+            ]
+        },
+        {
+            "company": "Globtier Infotech Pvt. Ltd.",
+            "role": "Full Stack Developer",
+            "period": "Apr 2022 - Feb 2024",
+            "projects": [
+                "Developed an AI-powered chatbot platform (Botgo) from scratch.",
+                "Built a client dashboard for chatbot customization.",
+                "Led a team of 4 junior frontend developers."
+            ]
+        },
+        {
+            "company": "Magnit",
+            "role": "React Developer",
+            "period": "Aug 2021 - Apr 2022",
+            "projects": [
+                "Developed and maintained a web application for the automotive sector.",
+                "Worked on a SaaS-based Hospital/Clinic Management Software."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Botgo (AI-powered Chatbot Platform)",
+            "description": "Developed a comprehensive AI-powered chatbot platform from scratch, enabling businesses to create and customize chatbots for various use cases.",
+            "technologies": [
+                "TypeScript",
+                "React",
+                "Node.js",
+                "Express",
+                "MongoDB"
+            ]
+        },
+        {
+            "name": "Dashboard for Botgo",
+            "description": "Built an intuitive client dashboard for Botgo, allowing users to customize their chatbots, view analytics, and manage conversations.",
+            "technologies": [
+                "React",
+                "Redux",
+                "Material-UI",
+                "Chart.js"
+            ]
+        },
+        {
+            "name": "AI-powered Newsletter Application",
+            "description": "Developed a cutting-edge newsletter application that uses AI to curate and personalize content for subscribers.",
+            "technologies": [
+                "TypeScript",
+                "Next.js",
+                "TailwindCSS",
+                "OpenAI API"
+            ]
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Professional Certificate in Computer Science for Web Programming",
+            "issuer": "EdX + Harvard University Online",
+            "date": "July 2024",
+            "url": "#"
+        },
+        {
+            "name": "CS50's Web Programming with Python and JavaScript",
+            "issuer": "Harvard University Online",
+            "date": "June 2024",
+            "url": "#"
+        },
+        {
+            "name": "CS50's Introduction to Computer Science",
+            "issuer": "Harvard University Online",
+            "date": "April 2024",
+            "url": "#"
+        },
+        {
+            "name": "The Complete 2021 Web Development Bootcamp",
+            "issuer": "Udemy",
+            "date": "September 2021",
+            "url": "#"
+        },
+        {
+            "name": "JavaScript Algorithms and Data Structures",
+            "issuer": "freeCodeCamp",
+            "date": "August 2021",
+            "url": "#"
+        }
+    ],
+    "email": "basu.abhirup27@gmail.com",
+    "github": "https://github.com/basuabhirup",
+    "linkedin": "https://linkedin.com/in/basu-abhirup",
+    "twitter": "https://x.com/basu_abhirup27",
+    "whatsapp": "https://wa.me/917003593820"
+}

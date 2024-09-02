@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, Twitter, ArrowUp } from "lucide-react";
 import Link from "next/link";
 import { SectionWrapper } from "./section-wrapper";
+import profile from "@/data/profile.json";
 
 export function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
@@ -157,7 +158,7 @@ export function Portfolio() {
           <div className="mr-4 hidden md:flex">
             <Link className="mr-6 flex items-center space-x-2" href="/">
               <span className="hidden font-bold sm:inline-block">
-                Abhirup Basu
+                {profile.name}
               </span>
             </Link>
             <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -232,6 +233,23 @@ export function Portfolio() {
                 Contact
               </Link>
             </nav>
+            <div className="flex flex-1 ml-3 items-center space-x-4">
+              {!!profile.github && (
+                <Link href={profile.github}>
+                  <Github className="h-5 w-5" />
+                </Link>
+              )}
+              {!!profile.linkedin && (
+                <Link href={profile.linkedin}>
+                  <Linkedin className="h-5 w-5" />
+                </Link>
+              )}
+              {!!profile.twitter && (
+                <Link href={profile.twitter}>
+                  <Twitter className="h-5 w-5" />
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </header>
@@ -240,16 +258,14 @@ export function Portfolio() {
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Abhirup Basu
+                {profile.name}
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                Full Stack Engineer | (React + Node + Next).js
+                {profile.headline}
               </p>
             </div>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-              Self-taught software engineer with 3+ years of expertise in
-              TypeScript, React.js, and Next.js, dedicated to crafting
-              user-focused web applications.
+              {profile.subheading}
             </p>
             <div className="space-x-4">
               <Button>
@@ -267,26 +283,9 @@ export function Portfolio() {
           </h2>
           <Card>
             <CardContent className="space-y-4 pt-6">
-              <p>
-                My journey into web development is unique, starting from a
-                background in Applied Geology. During my M.Sc. thesis on
-                GIS-based Satellite Image Processing, I discovered my passion
-                for technology and programming.
-              </p>
-              <p>
-                This spark led me to transition into web development, where
-                I&apos;ve honed my skills in creating user-centric web
-                experiences. My geological background gives me a unique
-                perspective on problem-solving and data visualization in web
-                applications.
-              </p>
-              <p>
-                Currently, I work as a Freelance Full Stack Developer, focusing
-                on AI-powered newsletter applications and mobile-responsive
-                websites. My goal is to create intuitive, efficient, and
-                scalable web solutions that make a real difference for users and
-                businesses alike.
-              </p>
+              {profile.about.paragraphs.map((para, index) => (
+                <p key={index}>{para}</p>
+              ))}
             </CardContent>
           </Card>
         </SectionWrapper>
@@ -296,7 +295,7 @@ export function Portfolio() {
           </h2>
           <Card>
             <CardContent className="pt-6">
-              {Object.entries(skills).map(([category, skillList]) => (
+              {Object.entries(profile.skills).map(([category, skillList]) => (
                 <div key={category} className="mb-6">
                   <h3 className="text-lg font-semibold mb-2">{category}</h3>
                   <div className="flex flex-wrap gap-2">
@@ -317,7 +316,7 @@ export function Portfolio() {
           </h2>
           <Card>
             <CardContent className="pt-6">
-              {experiences.map((exp, index) => (
+              {profile.experiences.map((exp, index) => (
                 <div key={index} className="mb-6">
                   <h3 className="text-lg font-semibold">{exp.company}</h3>
                   <p className="text-sm text-gray-500">
@@ -340,7 +339,7 @@ export function Portfolio() {
             Projects
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project, index) => (
+            {profile.projects.map((project, index) => (
               <Card key={index}>
                 <CardHeader>
                   <CardTitle>{project.name}</CardTitle>
@@ -367,7 +366,7 @@ export function Portfolio() {
           </h2>
           <Card>
             <CardContent className="pt-6">
-              {certifications.map((cert, index) => (
+              {profile.certifications.map((cert, index) => (
                 <div key={index} className="mb-4">
                   <h3 className="text-lg font-semibold">{cert.name}</h3>
                   <p className="text-sm text-gray-500">
@@ -397,65 +396,48 @@ export function Portfolio() {
             <CardContent className="space-y-4">
               <div className="flex items-center space-x-2">
                 <Mail className="h-5 w-5" />
-                <span>basu.abhirup27@gmail.com</span>
+                <Link
+                  href={`mailto:${profile.email}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  {profile.email}
+                </Link>
               </div>
               <div className="flex items-center space-x-2">
                 <Linkedin className="h-5 w-5" />
                 <Link
-                  href="https://linkedin.com/in/basu-abhirup"
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                  linkedin.com/in/basu-abhirup
+                  {profile.linkedin.split("://")[1]}
                 </Link>
               </div>
-              <div className="flex items-center space-x-2">
-                <Github className="h-5 w-5" />
-                <Link
-                  href="https://github.com/basuabhirup"
-                  className="hover:underline"
-                >
-                  github.com/basuabhirup
-                </Link>
-              </div>
-              <Button className="w-full">
-                <Link href="https://wa.me/yourphonenumber">
-                  WhatsApp: Click to chat
-                </Link>
-              </Button>
+              {!!profile.twitter && (
+                <div className="flex items-center space-x-2">
+                  <Twitter className="h-5 w-5" />
+                  <Link href={profile.twitter} className="hover:underline">
+                    {profile.twitter.split("://")[1]}
+                  </Link>
+                </div>
+              )}
+              {profile.whatsapp && (
+                <Button>
+                  <Link href={profile.whatsapp}>WhatsApp: Click to chat</Link>
+                </Button>
+              )}
             </CardContent>
           </Card>
         </SectionWrapper>
       </main>
       <footer className="border-t">
-        <div className="container flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 lg:px-8 xl:px-10">
-          <p className="text-xs text-gray-500 dark:text-gray-400">
-            © 2024 Abhirup Basu. All rights reserved.
+        <div className="container flex flex-col gap-2 py-6 w-full shrink-0 items-center px-4 md:px-6 lg:px-8 xl:px-10">
+          <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+            © 2024 {profile.name}. All rights reserved.
           </p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link
-              className="text-xs hover:underline underline-offset-4"
-              href="#"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              className="text-xs hover:underline underline-offset-4"
-              href="#"
-            >
-              Privacy
-            </Link>
-          </nav>
-          <div className="flex items-center space-x-4">
-            <Link href="https://linkedin.com/in/basu-abhirup">
-              <Linkedin className="h-5 w-5" />
-            </Link>
-            <Link href="https://github.com/basuabhirup">
-              <Github className="h-5 w-5" />
-            </Link>
-            <Link href="#">
-              <Twitter className="h-5 w-5" />
-            </Link>
-          </div>
         </div>
       </footer>
       {showScrollTop && (
