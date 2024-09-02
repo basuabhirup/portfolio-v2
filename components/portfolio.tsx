@@ -251,6 +251,8 @@ export function Portfolio() {
                   </p>
                   <Link
                     href={cert.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="text-sm 2xl:text-lg text-blue-500 hover:underline"
                   >
                     View Certificate
