@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body>{children}</body>
+      <body className="max-w-7xl mx-auto">{children}</body>
     </html>
   );
 }
