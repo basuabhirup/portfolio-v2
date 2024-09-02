@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Abhirup Basu",
@@ -13,7 +14,16 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body className="max-w-7xl mx-auto">{children}</body>
+      <body className="max-w-7xl mx-auto">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

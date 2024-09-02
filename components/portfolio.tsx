@@ -10,6 +10,7 @@ import Link from "next/link";
 import { SectionWrapper } from "./section-wrapper";
 import profile from "@/data/profile.json";
 import { SocialButtons } from "./social-buttons";
+import { ThemeToggle } from "./theme-toggle";
 
 export function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
@@ -73,10 +74,11 @@ export function Portfolio() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <header className="sticky top-0 z-50 w-full px-4 md:px-6 lg:px-8 xl:px-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="flex flex-col min-h-screen bg-background dark:bg-gray-900">
+      <header className="sticky top-0 z-50 w-full px-4 md:px-6 lg:px-8 xl:px-10 border-b bg-background/95 dark:bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:supports-[backdrop-filter]:bg-gray-900/60">
+        {" "}
         <div className="w-full flex h-14 justify-stretch items-center">
-          <div className="mx-4 w-full hidden md:flex justify-between">
+          <div className="mx-4 w-full hidden lg:flex justify-between">
             <Link className="mr-6 flex items-center space-x-2" href="/">
               <span className="hidden font-bold sm:inline-block">
                 {profile.name}
@@ -85,9 +87,12 @@ export function Portfolio() {
             <nav className="flex items-center space-x-6 text-sm font-medium mr-auto">
               <NavItems />
             </nav>
-            <SocialButtons />
+            <div className="flex gap-x-4">
+              <SocialButtons />
+              <ThemeToggle />
+            </div>
           </div>
-          <div className="flex md:hidden">
+          <div className="flex w-full lg:hidden">
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="mr-2">
@@ -106,9 +111,12 @@ export function Portfolio() {
                 </div>
               </SheetContent>
             </Sheet>
-            <Link className="flex items-center" href="/">
-              <span className="font-bold">{profile.name}</span>
-            </Link>
+            <div className="flex w-full justify-between">
+              <Link className="flex items-center" href="/">
+                <span className="font-bold">{profile.name}</span>
+              </Link>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </header>
@@ -127,17 +135,20 @@ export function Portfolio() {
               {profile.subheading}
             </p>
             <div className="space-x-4">
-              <Button>
+              <Button className="dark:border-gray-700 dark:text-gray-900">
                 <Link href="#projects">View Projects</Link>
               </Button>
-              <Button variant="outline">
+              <Button
+                variant="outline"
+                className="dark:border-gray-700 dark:text-gray-200"
+              >
                 <Link href="#contact">Contact Me</Link>
               </Button>
             </div>
           </div>
         </SectionWrapper>
         <SectionWrapper id="about" heading="About Me">
-          <Card className="2xl:text-xl">
+          <Card className="2xl:text-xl dark:bg-gray-800">
             <CardContent className="space-y-4 pt-6">
               {profile.about.paragraphs.map((para, index) => (
                 <p key={index}>{para}</p>
@@ -152,17 +163,21 @@ export function Portfolio() {
         >
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {profile.projects.map((project, index) => (
-              <Card key={index}>
+              <Card key={index} className="dark:bg-gray-800">
                 <CardHeader>
                   <CardTitle>{project.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-500 mb-4 2xl:text-xl">
+                  <p className="text-sm text-gray-500 mb-4 2xl:text-xl dark:text-gray-400">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary">
+                      <Badge
+                        key={tech}
+                        variant="secondary"
+                        className="dark:bg-gray-700 dark:text-gray-200"
+                      >
                         {tech}
                       </Badge>
                     ))}
@@ -180,7 +195,7 @@ export function Portfolio() {
                   <h3 className="text-lg 2xl:text-2xl font-semibold">
                     {exp.company}
                   </h3>
-                  <p className="text-sm 2xl:text-xl text-gray-500">
+                  <p className="text-sm 2xl:text-xl text-gray-500 dark:text-gray-400">
                     {exp.role} | {exp.period}
                   </p>
                   <ul className="list-disc list-inside mt-2">
@@ -231,7 +246,7 @@ export function Portfolio() {
                   <h3 className="text-lg 2xl:text-xl font-semibold">
                     {cert.name}
                   </h3>
-                  <p className="text-sm 2xl:text-lg text-gray-500">
+                  <p className="text-sm 2xl:text-lg text-gray-500 dark:text-gray-400">
                     {cert.issuer} | {cert.date}
                   </p>
                   <Link
@@ -307,7 +322,7 @@ export function Portfolio() {
           </Card>
         </SectionWrapper>
       </main>
-      <footer className="border-t">
+      <footer className="border-t dark:border-gray-800">
         <div className="container flex flex-col gap-2 py-6 w-full shrink-0 items-center px-4 md:px-6 lg:px-8 xl:px-10">
           <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
             ©{`${currentYear} ${profile.name}`}. All rights reserved.
@@ -317,7 +332,7 @@ export function Portfolio() {
       </footer>
       {showScrollTop && (
         <Button
-          className="fixed bottom-4 right-4 rounded-full p-2"
+          className="fixed bottom-4 right-4 rounded-full p-2 dark:bg-gray-700 dark:text-gray-200"
           onClick={scrollToTop}
           aria-label="Scroll to top"
         >
