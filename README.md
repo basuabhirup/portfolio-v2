@@ -27,8 +27,8 @@ Ensure you have the following installed:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/abhirup-portfolio.git
-   cd abhirup-portfolio
+   git clone git@github.com:basuabhirup/portfolio-v2.git
+   cd portfolio-v2
    ```
 
 2. **Install Dependencies:**
