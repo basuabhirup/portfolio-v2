@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio (v2) by Abhirup
+
+An open-source, developer-centric portfolio built with **Next.js**, **Tailwind CSS**, and **Shadcn**. This project is designed to be easily reusable by any developer—simply fork the repository, update the `data/profile.json` file with your own details, and deploy your personal portfolio.
+
+## Features
+
+- **Minimalistic Design:** Clean and simple interface focused on showcasing your work.
+- **Profile-Centric:** All developer-specific information is stored in a single `data/profile.json` file, making customization straightforward.
+- **Tech Stack:** Powered by Next.js, styled with Tailwind CSS and Shadcn UI components.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to run the project locally:
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 14.x or higher)
+- [npm](https://www.npmjs.com/)
+
+### Installation
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/abhirup-portfolio.git
+   cd abhirup-portfolio
+   ```
+
+2. **Install Dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Update Profile Information:**
+
+   - Navigate to the `data/profile.json` file.
+   - Replace the existing information with your own details.
+
+4. **Run the Development Server:**
+
+   ```bash
+   npm run dev
+   ```
+
+   Open your browser and go to `http://localhost:3000` to see your portfolio in action.
+
+### Building for Production
+
+To create an optimized production build, run:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This command generates the necessary files in the `out/` directory, ready for deployment.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You can deploy the project using any static site hosting service like Vercel, Netlify, or GitHub Pages.
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+If you find any issues or want to enhance the project, feel free to open an issue or submit a pull request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
