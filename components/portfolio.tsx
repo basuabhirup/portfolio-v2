@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Mail, Twitter, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, ArrowUp, Menu } from "lucide-react";
 import Link from "next/link";
 import { SectionWrapper } from "./section-wrapper";
 import profile from "@/data/profile.json";
@@ -40,6 +41,37 @@ export function Portfolio() {
     window.location.href = "#";
   };
 
+  const NavItems = () => {
+    const navClass = `transition-colors hover:text-foreground/80 ${
+      activeSection === "home" ? "text-foreground" : "text-foreground/60"
+    }`;
+    return (
+      <>
+        <Link className={navClass} href="#home">
+          Home
+        </Link>
+        <Link className={navClass} href="#about">
+          About
+        </Link>
+        <Link className={navClass} href="#projects">
+          Projects
+        </Link>
+        <Link className={navClass} href="#experience">
+          Experience
+        </Link>
+        <Link className={navClass} href="#skills">
+          Skills
+        </Link>
+        <Link className={navClass} href="#certifications">
+          Certifications
+        </Link>
+        <Link className={navClass} href="#contact">
+          Contact
+        </Link>
+      </>
+    );
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <header className="sticky top-0 z-50 w-full px-4 md:px-6 lg:px-8 xl:px-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -50,79 +82,33 @@ export function Portfolio() {
                 {profile.name}
               </span>
             </Link>
-            <nav className="flex items-center space-x-6 text-sm font-medium">
-              <Link
-                className={`transition-colors hover:text-foreground/80 ${
-                  activeSection === "home"
-                    ? "text-foreground"
-                    : "text-foreground/60"
-                }`}
-                href="#home"
-              >
-                Home
-              </Link>
-              <Link
-                className={`transition-colors hover:text-foreground/80 ${
-                  activeSection === "about"
-                    ? "text-foreground"
-                    : "text-foreground/60"
-                }`}
-                href="#about"
-              >
-                About
-              </Link>
-              <Link
-                className={`transition-colors hover:text-foreground/80 ${
-                  activeSection === "projects"
-                    ? "text-foreground"
-                    : "text-foreground/60"
-                }`}
-                href="#projects"
-              >
-                Projects
-              </Link>
-              <Link
-                className={`transition-colors hover:text-foreground/80 ${
-                  activeSection === "experience"
-                    ? "text-foreground"
-                    : "text-foreground/60"
-                }`}
-                href="#experience"
-              >
-                Experience
-              </Link>
-              <Link
-                className={`transition-colors hover:text-foreground/80 ${
-                  activeSection === "skills"
-                    ? "text-foreground"
-                    : "text-foreground/60"
-                }`}
-                href="#skills"
-              >
-                Skills
-              </Link>
-              <Link
-                className={`transition-colors hover:text-foreground/80 ${
-                  activeSection === "certifications"
-                    ? "text-foreground"
-                    : "text-foreground/60"
-                }`}
-                href="#certifications"
-              >
-                Certifications
-              </Link>
-              <Link
-                className={`transition-colors hover:text-foreground/80 ${
-                  activeSection === "contact"
-                    ? "text-foreground"
-                    : "text-foreground/60"
-                }`}
-                href="#contact"
-              >
-                Contact
-              </Link>
+            <nav className="flex items-center space-x-6 text-sm font-medium mr-auto">
+              <NavItems />
             </nav>
             <SocialButtons />
+          </div>
+          <div className="flex md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="mr-2">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-[240px]">
+                <div className="h-full flex flex-col">
+                  <div className="flex flex-col space-y-4 mt-4">
+                    <NavItems />
+                  </div>
+                  <div className="flex items-center justify-center mt-auto">
+                    <SocialButtons />
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+            <Link className="flex items-center" href="/">
+              <span className="font-bold">{profile.name}</span>
+            </Link>
           </div>
         </div>
       </header>
