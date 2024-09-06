@@ -2,7 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, Twitter, ArrowUp, Menu } from "lucide-react";
@@ -78,7 +85,7 @@ export function Portfolio() {
       <header className="sticky top-0 z-50 w-full px-4 md:px-6 lg:px-8 xl:px-10 border-b bg-background/95 dark:bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:supports-[backdrop-filter]:bg-gray-900/60">
         {" "}
         <div className="w-full flex h-14 justify-stretch items-center">
-          <div className="mx-4 w-full hidden lg:flex justify-between">
+          <div className="w-full max-w-screen-lg mx-auto hidden lg:flex justify-between">
             <Link className="mr-6 flex items-center space-x-2" href="/">
               <span className="hidden font-bold sm:inline-block">
                 {profile.name}
@@ -149,7 +156,7 @@ export function Portfolio() {
         </SectionWrapper>
         <SectionWrapper id="about" heading="About Me">
           <Card className="2xl:text-xl dark:bg-gray-800">
-            <CardContent className="space-y-4 pt-6">
+            <CardContent className="space-y-4 px-4 py-8">
               {profile.about.paragraphs.map((para, index) => (
                 <p key={index}>{para}</p>
               ))}
@@ -163,26 +170,27 @@ export function Portfolio() {
         >
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {profile.projects.map((project, index) => (
-              <Card key={index} className="dark:bg-gray-800">
+              <Card key={index} className="flex flex-col h-[400px]">
                 <CardHeader>
                   <CardTitle>{project.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-500 mb-4 2xl:text-xl dark:text-gray-400">
+                  <CardDescription className="text-sm text-gray-500 mb-4 2xl:text-xl dark:text-gray-400">
                     {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="secondary"
-                        className="dark:bg-gray-700 dark:text-gray-200"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
+                  </CardDescription>
                 </CardContent>
+                <CardContent className="flex-grow" />
+                <CardFooter className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="dark:bg-gray-700 dark:text-gray-200"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </CardFooter>
               </Card>
             ))}
           </div>

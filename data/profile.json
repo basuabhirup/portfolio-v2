@@ -81,34 +81,71 @@
     ],
     "projects": [
         {
-            "name": "Botgo (AI-powered Chatbot Platform)",
-            "description": "Developed a comprehensive AI-powered chatbot platform from scratch, enabling businesses to create and customize chatbots for various use cases.",
-            "technologies": [
-                "TypeScript",
-                "React",
-                "Node.js",
-                "Express",
-                "MongoDB"
-            ]
-        },
-        {
-            "name": "Dashboard for Botgo",
-            "description": "Built an intuitive client dashboard for Botgo, allowing users to customize their chatbots, view analytics, and manage conversations.",
-            "technologies": [
-                "React",
-                "Redux",
-                "Material-UI",
-                "Chart.js"
-            ]
-        },
-        {
-            "name": "AI-powered Newsletter Application",
-            "description": "Developed a cutting-edge newsletter application that uses AI to curate and personalize content for subscribers.",
+            "name": "AI Flashcards",
+            "description": "Smart flashcards powered by AI to supercharge learning experience.",
             "technologies": [
                 "TypeScript",
                 "Next.js",
+                "Tailwind",
+                "NextUI",
+                "OpenAI"
+            ]
+        },
+        {
+            "name": "Kichirmichir",
+            "description": "An Interactive, Duolingo-Inspired Language Learning Application.",
+            "technologies": [
+                "TypeScript",
+                "Next.js",
+                "Tailwind",
+                "ShadcnUI",
+                "PostgreSQL",
+                "Drizzle"
+            ]
+        },
+        {
+            "name": "Still A Work of Art",
+            "description": "A minimalist web app designed to provide artists with inspiration without any distractions.",
+            "technologies": [
+                "TypeScript",
+                "Next.js",
+                "Tailwind",
+                "ShacdnUI",
+                "Unsplash"
+            ]
+        },
+        {
+            "name": "Chicken Or Egg",
+            "description": "A simple, curiosity-driven app that challenges users to guess the order of origins between various entities.",
+            "technologies": [
+                "TypeScript",
+                "React.js",
+                "Firebase",
+                "Game",
+                "Quiz"
+            ]
+        },
+        {
+            "name": "Botgo @Globtier",
+            "description": "An AI-powered chatbot platform where users can create and customize chatbots for various use cases.",
+            "technologies": [
+                "TypeScript",
+                "React.js",
+                "Node.js",
+                "GraphQL",
+                "Prisma",
+                "MySQL"
+            ]
+        },
+        {
+            "name": "NewsAI @Atlas Apps",
+            "description": "An AI-powered newsletter service to provide daily news summaries on any topic users are interested in.",
+            "technologies": [
+                "TypeScript",
+                "Next.js",
+                "React.js",
                 "TailwindCSS",
-                "OpenAI API"
+                "Firebase"
             ]
         }
     ],
