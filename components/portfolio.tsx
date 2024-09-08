@@ -18,6 +18,7 @@ import { SectionWrapper } from "./section-wrapper";
 import profile from "@/data/profile.json";
 import { SocialButtons } from "./social-buttons";
 import { ThemeToggle } from "./theme-toggle";
+import Image from "next/image";
 
 export function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
@@ -170,16 +171,22 @@ export function Portfolio() {
         >
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {profile.projects.map((project, index) => (
-              <Card key={index} className="flex flex-col h-[400px]">
+              <Card key={index} className="flex flex-col min-h-[400px]">
                 <CardHeader>
                   <CardTitle>{project.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
                   <CardDescription className="text-sm text-gray-500 mb-4 2xl:text-xl dark:text-gray-400">
                     {project.description}
                   </CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow flex flex-col justify-center items-center mb-2">
+                  <Image
+                    src={project.imageSrc}
+                    height={400}
+                    width={600}
+                    alt={project.name}
+                    className="object-cover w-[240px] mx-0 PX-O h-[180px] rounded-md border border-gray-300 dark:border-gray-700"
+                  />
                 </CardContent>
-                <CardContent className="flex-grow" />
                 <CardFooter className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <Badge

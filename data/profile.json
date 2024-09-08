@@ -83,6 +83,7 @@
         {
             "name": "AI Flashcards",
             "description": "Smart flashcards powered by AI to supercharge learning experience.",
+            "imageSrc": "/project-ai-flashcards.png",
             "technologies": [
                 "TypeScript",
                 "Next.js",
@@ -94,6 +95,7 @@
         {
             "name": "Kichirmichir",
             "description": "An Interactive, Duolingo-Inspired Language Learning Application.",
+            "imageSrc": "/project-kichirmichir.png",
             "technologies": [
                 "TypeScript",
                 "Next.js",
@@ -106,6 +108,7 @@
         {
             "name": "Still A Work of Art",
             "description": "A minimalist web app designed to provide artists with inspiration without any distractions.",
+            "imageSrc": "/project-still-art.png",
             "technologies": [
                 "TypeScript",
                 "Next.js",
@@ -117,6 +120,7 @@
         {
             "name": "Chicken Or Egg",
             "description": "A simple, curiosity-driven app that challenges users to guess the order of origins between various entities.",
+            "imageSrc": "/project-chicken-or-egg.png",
             "technologies": [
                 "TypeScript",
                 "React.js",
@@ -128,6 +132,7 @@
         {
             "name": "Botgo @Globtier",
             "description": "An AI-powered chatbot platform where users can create and customize chatbots for various use cases.",
+            "imageSrc": "/project-botgo.png",
             "technologies": [
                 "TypeScript",
                 "React.js",
@@ -140,6 +145,7 @@
         {
             "name": "NewsAI @Atlas Apps",
             "description": "An AI-powered newsletter service to provide daily news summaries on any topic users are interested in.",
+            "imageSrc": "/project-newsai.png",
             "technologies": [
                 "TypeScript",
                 "Next.js",
