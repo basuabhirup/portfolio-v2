@@ -90,7 +90,10 @@
                 "Tailwind",
                 "NextUI",
                 "OpenAI"
-            ]
+            ],
+            "github": "https://git.new/ai-flashcards-app",
+            "url": "https://dub.sh/ai-flashcards",
+            "tags": []
         },
         {
             "name": "Kichirmichir",
@@ -100,10 +103,13 @@
                 "TypeScript",
                 "Next.js",
                 "Tailwind",
-                "ShadcnUI",
+                "Shadcn",
                 "PostgreSQL",
                 "Drizzle"
-            ]
+            ],
+            "github": "https://git.new/kichirmichir",
+            "url": "https://dub.sh/kichirmichir-app",
+            "tags": []
         },
         {
             "name": "Still A Work of Art",
@@ -113,9 +119,12 @@
                 "TypeScript",
                 "Next.js",
                 "Tailwind",
-                "ShacdnUI",
+                "Shacdn",
                 "Unsplash"
-            ]
+            ],
+            "github": "https://git.new/still-art",
+            "url": "https://dub.sh/still-art",
+            "tags": []
         },
         {
             "name": "Chicken Or Egg",
@@ -124,10 +133,11 @@
             "technologies": [
                 "TypeScript",
                 "React.js",
-                "Firebase",
-                "Game",
-                "Quiz"
-            ]
+                "Firebase"
+            ],
+            "github": "https://git.new/chicken-or-egg",
+            "url": "https://dub.sh/chicken-or-egg",
+            "tags": []
         },
         {
             "name": "Botgo @Globtier",
@@ -140,6 +150,10 @@
                 "GraphQL",
                 "Prisma",
                 "MySQL"
+            ],
+            "url": "https://dub.sh/botgo",
+            "tags": [
+                "In Production"
             ]
         },
         {
@@ -149,9 +163,13 @@
             "technologies": [
                 "TypeScript",
                 "Next.js",
-                "React.js",
-                "TailwindCSS",
-                "Firebase"
+                "Tailwind",
+                "Prisma",
+                "PostgreSQL"
+            ],
+            "url": "https://dub.sh/newsai",
+            "tags": [
+                "In Production"
             ]
         }
     ],

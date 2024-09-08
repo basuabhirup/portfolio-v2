@@ -12,7 +12,15 @@ import {
 } from "@/components/ui/card";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Mail, Twitter, ArrowUp, Menu } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+  ArrowUp,
+  Menu,
+  Link2,
+} from "lucide-react";
 import Link from "next/link";
 import { SectionWrapper } from "./section-wrapper";
 import profile from "@/data/profile.json";
@@ -171,23 +179,75 @@ export function Portfolio() {
         >
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {profile.projects.map((project, index) => (
-              <Card key={index} className="flex flex-col min-h-[400px]">
+              <Card
+                key={index}
+                className="flex flex-col min-h-[400px] hover:cursor-pointer hover:my-[-1px]"
+              >
                 <CardHeader>
                   <CardTitle>{project.name}</CardTitle>
-                  <CardDescription className="text-sm text-gray-500 mb-4 2xl:text-xl dark:text-gray-400">
-                    {project.description}
+                  <CardDescription className="text-sm text-gray-500 2xl:text-xl dark:text-gray-400">
+                    <p>{project.description}</p>
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="flex-grow flex flex-col justify-center items-center mb-2">
+                <CardContent className="flex-grow flex flex-col justify-center items-center mb-1 pb-1 gap-y-1">
                   <Image
                     src={project.imageSrc}
                     height={400}
                     width={600}
                     alt={project.name}
-                    className="object-cover w-[240px] mx-0 PX-O h-[180px] rounded-md border border-gray-300 dark:border-gray-700"
+                    className="object-cover w-[240px] mx-0 px-O h-[180px] rounded-md border border-gray-300 dark:border-gray-700"
                   />
+                  <div className="flex w-full justify-between my-2">
+                    <div className="flex flex-grow justify-start gap-x-4 ms-4">
+                      {!!project.github && (
+                        <Link
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-decoration-none"
+                        >
+                          <Button
+                            variant="outline"
+                            size="icon"
+                            className="size-8"
+                          >
+                            <Github size={16} />
+                          </Button>
+                        </Link>
+                      )}
+                      {!!project.url && (
+                        <Link
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-decoration-none"
+                        >
+                          <Button
+                            variant="outline"
+                            size="icon"
+                            className="size-8"
+                          >
+                            <Link2 size={16} />
+                          </Button>
+                        </Link>
+                      )}
+                    </div>
+                    <div className="flex justify-end me-4">
+                      {!!project.tags &&
+                        project.tags.length > 0 &&
+                        project.tags.map((tag) => (
+                          <Badge
+                            key={tag}
+                            variant="secondary"
+                            className="text-center mx-auto bg-green-100 text-gray-700 hover:bg-green-200 hover:text-gray-900 hover:cursor-pointer dark:bg-gray-900 dark:text-green-100 dark:border-green-900 hover:dark:bg-gray-800 hover:dark:text-green-50 hover:dark:border-green-700"
+                          >
+                            {project.tags[0]}
+                          </Badge>
+                        ))}
+                    </div>
+                  </div>
                 </CardContent>
-                <CardFooter className="flex flex-wrap gap-2">
+                <CardFooter className="flex flex-wrap gap-2 mx-2">
                   {project.technologies.map((tech) => (
                     <Badge
                       key={tech}
