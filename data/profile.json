@@ -1,12 +1,12 @@
 {
     "name": "Abhirup Basu",
-    "headline": "Full Stack Engineer | (React + Node + Next).js",
-    "subheading": "Self-taught software engineer with 3+ years of expertise in TypeScript, React.js, and Next.js, dedicated to crafting user-focused web applications.",
+    "headline": "Full Stack Engineer | React.js + Node.js + Next.js",
+    "subheading": "Software Engineer with 3+ years of expertise in TypeScript, React.js, Node.js and Next.js, dedicated to crafting user-focused web applications.",
     "about": {
         "paragraphs": [
-            "My journey into web development is unique, starting from a background in Applied Geology. During my M.Sc. thesis on GIS-based Satellite Image Processing, I discovered my passionfor technology and programming.",
-            "This spark led me to transition into web development, where I've honed my skills in creating user-centric web experiences. My geological background gives me a unique perspective on problem-solving and data visualization in web applications.",
-            "Currently, I work as a Freelance Full Stack Developer, focusing on AI-powered newsletter applications and mobile-responsive websites. My goal is to create intuitive, efficient, and scalable web solutions that make a real difference for users and businesses alike."
+            "I'm a self-taught programmer with a unique background in Applied Geology. My journey into software engineering began while working on GIS-based Satellite Image Processing for my M.Sc. thesis, igniting my passion for technology and problem-solving. Over the past 3+ years, I've honed my skills in a wide array of web technologies, specializing in modern JavaScript frameworks.",
+            "My expertise spans frontend and backend development, including TypeScript, React.js, Next.js, Node.js, Express.js, and various databases and APIs. I've led the development of a production-level AI-powered chatbot platform and related client dashboard from the ground up. My geological roots give me a distinct problem-solving approach, allowing me to craft user-centric solutions that stand out in the digital landscape.",
+            "When I'm not coding, you can find me enjoying hot coffee, music, long walks, or exploring new places. I'm always excited to take on new challenges and collaborate on innovative projects. If you're looking for a developer who can bring your ideas to life with robust, fully-functional web applications, let's connect and create something extraordinary together!"
         ]
     },
     "skills": {
@@ -20,18 +20,19 @@
             "JavaScript",
             "Bootstrap",
             "Tailwind",
-            "jQuery",
-            "Material-UI"
+            "Shadcn-UI",
+            "Next-UI"
         ],
         "Backend": [
             "Node.js",
             "Express.js",
             "Prisma",
+            "Drizzle",
+            "MySQL",
+            "PostgreSQL",
             "Python",
             "Django",
-            "FastAPI",
-            "MySQL",
-            "PostgreSQL"
+            "FastAPI"
         ],
         "API": [
             "REST",
@@ -52,7 +53,7 @@
     "experiences": [
         {
             "company": "Freelance",
-            "role": "Full Stack Developer",
+            "role": "Software Engineer Contractor",
             "period": "Mar 2024 - Present",
             "projects": [
                 "Developed an AI-powered newsletter application using TypeScript, Next.js, and TailwindCSS.",
@@ -61,17 +62,17 @@
         },
         {
             "company": "Globtier Infotech Pvt. Ltd.",
-            "role": "Full Stack Developer",
+            "role": "React Developer",
             "period": "Apr 2022 - Feb 2024",
             "projects": [
                 "Developed an AI-powered chatbot platform (Botgo) from scratch.",
                 "Built a client dashboard for chatbot customization.",
-                "Led a team of 4 junior frontend developers."
+                "Led a team of 4 junior web developers."
             ]
         },
         {
             "company": "Magnit",
-            "role": "React Developer",
+            "role": "React.js Developer",
             "period": "Aug 2021 - Apr 2022",
             "projects": [
                 "Developed and maintained a web application for the automotive sector.",
@@ -89,6 +90,7 @@
                 "Next.js",
                 "Tailwind",
                 "NextUI",
+                "Firebase",
                 "OpenAI"
             ],
             "github": "https://git.new/ai-flashcards-app",
@@ -209,5 +211,5 @@
     "github": "https://github.com/basuabhirup",
     "linkedin": "https://linkedin.com/in/basu-abhirup",
     "twitter": "https://x.com/basu_abhirup27",
-    "whatsapp": "https://wa.me/917003593820"
+    "whatsapp": ""
 }

@@ -20,6 +20,7 @@ import {
   ArrowUp,
   Menu,
   Link2,
+  ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
 import { SectionWrapper } from "./section-wrapper";
@@ -335,9 +336,11 @@ export function Portfolio() {
                     href={cert.url}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="text-sm 2xl:text-lg text-blue-500 hover:underline"
                   >
-                    View Certificate
+                    <Badge variant="secondary" className="text-xs">
+                      View Certificate
+                      <ExternalLink size={12} className="ms-2" />
+                    </Badge>
                   </Link>
                 </div>
               ))}
