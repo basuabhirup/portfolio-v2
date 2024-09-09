@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Abhirup Basu",
-  description: "Full Stack Engineer | (React + Next + Node).js",
+  description: "Full Stack Engineer | (React + Node + Next).js",
 };
 
 export default function RootLayout({
