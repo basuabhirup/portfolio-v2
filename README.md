@@ -2,9 +2,6 @@
 
 An open-source, developer-centric portfolio built with **Next.js**, **Tailwind CSS**, and **Shadcn**. This project is designed to be easily reusable by any developer—simply fork the repository, update the `data/profile.json` file with your own details, and deploy your personal portfolio.
 
-![image](https://github.com/user-attachments/assets/439a52c3-0ee6-4d0e-9449-4dba3d062f10)
-
-
 ## Features
 
 - **Minimalistic Design:** Clean and simple interface focused on showcasing your work.
