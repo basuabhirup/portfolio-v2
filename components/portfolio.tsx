@@ -140,7 +140,7 @@ export function Portfolio() {
         <SectionWrapper id="home">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none 2xl:text-7xl">
+              <h1 className="text-5xl font-bold tracking-tighter lg:text-6xl/none 2xl:text-7xl">
                 {profile.name}
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl 2xl:max-w-[800px] 2xl:text-2xl dark:text-gray-400">
@@ -181,7 +181,7 @@ export function Portfolio() {
             {profile.projects.map((project, index) => (
               <Card
                 key={index}
-                className="flex flex-col min-h-[400px] hover:cursor-pointer hover:my-[-1px]"
+                className="flex flex-col min-h-[400px] hover:cursor-pointer"
               >
                 <CardHeader>
                   <CardTitle>{project.name}</CardTitle>
@@ -190,13 +190,20 @@ export function Portfolio() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow flex flex-col justify-center items-center mb-1 pb-1 gap-y-1">
-                  <Image
-                    src={project.imageSrc}
-                    height={400}
-                    width={600}
-                    alt={project.name}
-                    className="object-cover w-[240px] mx-0 px-O h-[180px] rounded-md border border-gray-300 dark:border-gray-700"
-                  />
+                  <Link
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-decoration-none"
+                  >
+                    <Image
+                      src={project.imageSrc}
+                      height={400}
+                      width={600}
+                      alt={project.name}
+                      className="object-cover w-[240px] mx-0 px-O h-[180px] rounded-md border border-gray-300 dark:border-gray-700 hover:scale-[1.01]"
+                    />
+                  </Link>
                   <div className="flex w-full justify-between my-2">
                     <div className="flex flex-grow justify-start gap-x-4 ms-4">
                       {!!project.github && (
@@ -204,7 +211,7 @@ export function Portfolio() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-decoration-none"
+                          className="text-decoration-none hover:scale-[1.01]"
                         >
                           <Button
                             variant="outline"
@@ -220,7 +227,7 @@ export function Portfolio() {
                           href={project.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-decoration-none"
+                          className="text-decoration-none hover:scale-[1.01]"
                         >
                           <Button
                             variant="outline"

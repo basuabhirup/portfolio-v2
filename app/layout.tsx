@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body className="max-w-7xl mx-auto">
+      <body className="max-w-7xl mx-auto bg-background dark:bg-gray-900">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
