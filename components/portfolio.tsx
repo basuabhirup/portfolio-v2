@@ -152,15 +152,19 @@ export function Portfolio() {
               {profile.subheading}
             </p>
             <div className="space-x-4">
-              <Button className="dark:border-gray-700 dark:text-gray-900">
-                <Link href="#projects">View Projects</Link>
-              </Button>
-              <Button
-                variant="outline"
-                className="dark:border-gray-700 dark:text-gray-200"
-              >
-                <Link href="#contact">Contact Me</Link>
-              </Button>
+              <Link href="#projects">
+                <Button className="dark:border-gray-700 dark:text-gray-900">
+                  View Projects
+                </Button>
+              </Link>
+              <Link href="#contact">
+                <Button
+                  variant="outline"
+                  className="dark:border-gray-700 dark:text-gray-200"
+                >
+                  Contact Me
+                </Button>
+              </Link>
             </div>
           </div>
         </SectionWrapper>
