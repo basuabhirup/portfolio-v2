@@ -21,6 +21,8 @@ import {
   Menu,
   Link2,
   ExternalLink,
+  MessageCircle,
+  Calendar,
 } from "lucide-react";
 import Link from "next/link";
 import { SectionWrapper } from "./section-wrapper";
@@ -398,26 +400,39 @@ export function Portfolio() {
                   </Link>
                 </div>
               )}
+              <div className="flex flex-col md:flex-row gap-4">
               {profile.whatsapp && (
-                <Button>
                   <Link
-                    href={profile.whatsapp}
+                    href={`https://wa.me/${profile.whatsapp}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 text-sm font-semibold rounded-md transition-all duration-300 ease-in-out transform hover:scale-105"
                   >
+                    <MessageCircle className="mr-2 h-5 w-5" />
                     WhatsApp: Click to chat
                   </Link>
-                </Button>
+                )}
+                {profile.cal && (
+                  <Link
+                    href={profile.cal}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 text-sm font-semibold rounded-md transition-all duration-300 ease-in-out transform hover:scale-105"
+                  >
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Schedule a Free Call
+                  </Link>
               )}
+              </div>
             </CardContent>
           </Card>
         </SectionWrapper>
       </main>
       <footer className="border-t dark:border-gray-800">
         <div className="container flex flex-col gap-2 py-6 w-full shrink-0 items-center px-4 md:px-6 lg:px-8 xl:px-10">
-          <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+          <div className="text-xs text-gray-500 dark:text-gray-400 mb-3">
             ©{`${currentYear} ${profile.name}`}. All rights reserved.
-          </p>
+          </div>
           <SocialButtons />
         </div>
       </footer>

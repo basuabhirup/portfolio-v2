@@ -5,6 +5,16 @@ import { ThemeProvider } from "@/components/theme-provider";
 export const metadata: Metadata = {
   title: "Abhirup Basu",
   description: "Full Stack Engineer | (React + Node + Next).js",
+  metadataBase: new URL("https://abhirupbasu.com"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+    },
+  },
+  openGraph: {
+    images: "/opengraph-image.png",
+  },
 };
 
 export default function RootLayout({

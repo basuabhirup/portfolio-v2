@@ -1,7 +1,7 @@
 {
     "name": "Abhirup Basu",
-    "headline": "Full Stack Engineer | React.js + Node.js + Next.js",
-    "subheading": "Software Engineer with 3+ years of expertise in TypeScript, React.js, Node.js and Next.js, dedicated to crafting user-focused web applications.",
+    "headline": "Full Stack Engineer | Open Source Enthusiast | Lifelong Learner",
+    "subheading": "Software Engineer with 3+ years of expertise in developing user-focused web applications, supporting open source, and constantly expanding knowledge.",
     "about": {
         "paragraphs": [
             "I'm a self-taught programmer with a unique background in Applied Geology. My journey into software engineering began while working on a GIS-based Satellite Image Processing project in my final year of M.Sc., driven by a passion for technology and problem-solving. Over the past 3+ years, I've honed my skills in a wide array of web technologies, specializing in modern JavaScript frameworks.",
@@ -211,5 +211,6 @@
     "github": "https://github.com/basuabhirup",
     "linkedin": "https://linkedin.com/in/basu-abhirup",
     "twitter": "https://x.com/basu_abhirup27",
-    "whatsapp": ""
+    "whatsapp": "",
+    "cal": "https://cal.com/abhirup-basu"
 }
