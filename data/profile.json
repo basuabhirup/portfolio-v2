@@ -1,12 +1,12 @@
 {
     "name": "Abhirup Basu",
-    "headline": "Full Stack Engineer | Open Source Enthusiast | Lifelong Learner",
-    "subheading": "Software Engineer with 3+ years of expertise in developing user-focused web applications, supporting open source, and constantly expanding knowledge.",
+    "headline": "Full Stack Engineer | AI Workflow Consultant | Open Source Enthusiast",
+    "subheading": "Software Engineer with ~4 years of experience in building user-focused web applications, designing AI-driven automation workflows, contributing to open source, and continuously learning.",
     "about": {
         "paragraphs": [
-            "I'm a self-taught programmer with a unique background in Applied Geology. My journey into software engineering began while working on a GIS-based Satellite Image Processing project in my final year of M.Sc., driven by a passion for technology and problem-solving. Over the past 3+ years, I've honed my skills in a wide array of web technologies, specializing in modern JavaScript frameworks.",
-            "My expertise spans frontend and backend development, including TypeScript, React.js, Next.js, Node.js, Express.js, and various databases and APIs. I've led the development of a production-level AI-powered chatbot platform and related client dashboard from the ground up. My geological roots give me a distinct problem-solving approach, allowing me to craft user-centric solutions that stand out in the digital landscape.",
-            "When I'm not coding, you can find me enjoying hot coffee, music, long walks, or exploring new places. I'm always excited to take on new challenges and collaborate on innovative projects. If you're looking for a developer who can bring your ideas to life with robust, fully-functional web applications, let's connect and create something extraordinary together!"
+            "I'm a self-taught programmer with a unique background in Applied Geology. My journey into software engineering began while working on a GIS-based Satellite Image Processing project in my final year of M.Sc., driven by a passion for technology and problem-solving. Over the past 4 years, I've honed my skills in a wide array of web technologies, specializing in modern JavaScript frameworks.",
+            "My expertise spans frontend and backend development, including TypeScript, React.js, Next.js, Node.js, Express.js, and various databases and APIs. I've led the development of a production-level AI-powered chatbot platform and related client dashboard from the ground up. In recent years, I've also been helping businesses automate their operations by designing and implementing custom AI workflows—streamlining everything from lead generation to customer support using tools like OpenAI, n8n.io, and Make.com.",
+            "When I'm not coding, you can find me enjoying hot coffee, music, long walks, or exploring new places. I'm always excited to take on new challenges and collaborate on innovative projects. If you're looking for a developer who can bring your ideas to life—or help automate your workflows with AI—let's connect and create something extraordinary together!"
         ]
     },
     "skills": {
@@ -82,6 +82,39 @@
     ],
     "projects": [
         {
+            "name": "NewsAI @Atlas Apps",
+            "description": "An AI-powered newsletter service to provide daily news summaries on any topic users are interested in.",
+            "imageSrc": "/project-newsai.png",
+            "technologies": [
+                "TypeScript",
+                "Next.js",
+                "Tailwind",
+                "Prisma",
+                "PostgreSQL"
+            ],
+            "url": "https://dub.sh/newsai",
+            "tags": [
+                "In Production"
+            ]
+        },
+        {
+            "name": "Botgo @Globtier",
+            "description": "An AI-powered chatbot platform where users can create and customize chatbots for various use cases.",
+            "imageSrc": "/project-botgo.png",
+            "technologies": [
+                "TypeScript",
+                "React.js",
+                "Node.js",
+                "GraphQL",
+                "Prisma",
+                "MySQL"
+            ],
+            "url": "https://dub.sh/botgo",
+            "tags": [
+                "In Production"
+            ]
+        },
+        {
             "name": "AI Flashcards",
             "description": "Smart flashcards powered by AI to supercharge learning experience.",
             "imageSrc": "/project-ai-flashcards.png",
@@ -140,39 +173,6 @@
             "github": "https://git.new/chicken-or-egg",
             "url": "https://dub.sh/chicken-or-egg",
             "tags": []
-        },
-        {
-            "name": "Botgo @Globtier",
-            "description": "An AI-powered chatbot platform where users can create and customize chatbots for various use cases.",
-            "imageSrc": "/project-botgo.png",
-            "technologies": [
-                "TypeScript",
-                "React.js",
-                "Node.js",
-                "GraphQL",
-                "Prisma",
-                "MySQL"
-            ],
-            "url": "https://dub.sh/botgo",
-            "tags": [
-                "In Production"
-            ]
-        },
-        {
-            "name": "NewsAI @Atlas Apps",
-            "description": "An AI-powered newsletter service to provide daily news summaries on any topic users are interested in.",
-            "imageSrc": "/project-newsai.png",
-            "technologies": [
-                "TypeScript",
-                "Next.js",
-                "Tailwind",
-                "Prisma",
-                "PostgreSQL"
-            ],
-            "url": "https://dub.sh/newsai",
-            "tags": [
-                "In Production"
-            ]
         }
     ],
     "certifications": [
@@ -207,7 +207,7 @@
             "url": "https://www.freecodecamp.org/certification/basuabhirup/javascript-algorithms-and-data-structures"
         }
     ],
-    "email": "basu.abhirup27@gmail.com",
+    "email": "abhirup@abhirupbasu.com",
     "github": "https://github.com/basuabhirup",
     "linkedin": "https://linkedin.com/in/basu-abhirup",
     "twitter": "https://x.com/basu_abhirup27",

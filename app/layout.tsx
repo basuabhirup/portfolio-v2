@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Clarity from "@microsoft/clarity";
+
+const projectId = "rrj5qadh5g";
+
+Clarity.init(projectId);
 
 export const metadata: Metadata = {
   title: "Abhirup Basu",
