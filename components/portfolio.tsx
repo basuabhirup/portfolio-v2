@@ -30,6 +30,11 @@ import profile from "@/data/profile.json";
 import { SocialButtons } from "./social-buttons";
 import { ThemeToggle } from "./theme-toggle";
 import Image from "next/image";
+import Clarity from "@microsoft/clarity";
+
+const projectId = "rrj5qadh5g";
+
+Clarity.init(projectId);
 
 export function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
@@ -401,7 +406,7 @@ export function Portfolio() {
                 </div>
               )}
               <div className="flex flex-col md:flex-row gap-4">
-              {profile.whatsapp && (
+                {profile.whatsapp && (
                   <Link
                     href={`https://wa.me/${profile.whatsapp}`}
                     target="_blank"
@@ -422,7 +427,7 @@ export function Portfolio() {
                     <Calendar className="mr-2 h-5 w-5" />
                     Schedule a Free Call
                   </Link>
-              )}
+                )}
               </div>
             </CardContent>
           </Card>
