@@ -98,7 +98,7 @@ export function Portfolio() {
   };
 
   return (
-    <div className="max-w-7xl flex flex-col min-h-screen bg-background dark:bg-gray-900">
+    <div className="max-w-7xl mx-auto flex flex-col min-h-screen bg-background dark:bg-gray-900">
       <header className="sticky top-0 z-50 w-full px-4 md:px-6 lg:px-8 xl:px-10 border-b bg-background/95 dark:bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:supports-[backdrop-filter]:bg-gray-900/60">
         {" "}
         <div className="w-full flex h-14 justify-stretch items-center">
